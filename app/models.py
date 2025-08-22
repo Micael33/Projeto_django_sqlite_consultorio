@@ -13,5 +13,5 @@ class Medico(models.Model):
     nome = models.CharField(max_length=100)
     especialidade = models.CharField(max_length=100)
     crm = models.CharField(max_length=20)
-    pacientes = models.ManyToManyField(Paciente, related_name='medicos')
+    pacientes = models.ManyToOneField(Paciente, related_name='medicos')
     
